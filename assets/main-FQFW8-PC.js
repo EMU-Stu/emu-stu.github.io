@@ -1,4 +1,4 @@
-var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configurable:!0,writable:!0,value:e}):c[i]=e;var o=(c,i,e)=>L(c,typeof i!="symbol"?i+"":i,e);(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))t(r);new MutationObserver(r=>{for(const a of r)if(a.type==="childList")for(const s of a.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&t(s)}).observe(document,{childList:!0,subtree:!0});function e(r){const a={};return r.integrity&&(a.integrity=r.integrity),r.referrerPolicy&&(a.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?a.credentials="include":r.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function t(r){if(r.ep)return;r.ep=!0;const a=e(r);fetch(r.href,a)}})();const E="/assets/emu-stu-logo-D3KqYaZd.png",f=E,w="EMU-Stu",b="应急管理大学开源技术组织",$="技术服务校园，开源贡献社区",S=[{label:"首页",href:"#",active:!0},{label:"技术博客",href:"blog.html",active:!1}],C="blog.html",g={related:[{label:"学校官网",href:"#"},{label:"教务系统",href:"#"},{label:"图书馆",href:"#"}],bottom:[{label:"想知道此网站是如何实现的？点击查看文章",href:C,underline:!0}]};class T extends HTMLElement{constructor(){super(...arguments);o(this,"_menuOpen",!1)}connectedCallback(){this.classList.add("sticky","top-0","z-50","block","w-full"),this.render(),this.setupEventListeners()}render(){const e=window.location.pathname.includes("blog.html")||window.location.pathname.endsWith("/blog"),t=S.map(s=>{let n=s.href,l=s.active;return e?s.label==="首页"?(n="index.html",l=!1):s.label==="技术博客"&&(n="#",l=!0):s.label==="首页"?(n="#",l=!0):s.label==="技术博客"&&(n="blog.html",l=!1),{label:s.label,href:n,active:l}}),r=t.map(s=>`
+var E=Object.defineProperty;var L=(o,i,e)=>i in o?E(o,i,{enumerable:!0,configurable:!0,writable:!0,value:e}):o[i]=e;var l=(o,i,e)=>L(o,typeof i!="symbol"?i+"":i,e);(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))t(r);new MutationObserver(r=>{for(const a of r)if(a.type==="childList")for(const s of a.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&t(s)}).observe(document,{childList:!0,subtree:!0});function e(r){const a={};return r.integrity&&(a.integrity=r.integrity),r.referrerPolicy&&(a.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?a.credentials="include":r.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function t(r){if(r.ep)return;r.ep=!0;const a=e(r);fetch(r.href,a)}})();const _="/assets/emu-stu-logo-D3KqYaZd.png",x=_,w="EMU-Stu",b="应急管理大学开源技术组织",$="技术服务校园，开源贡献社区",S=[{label:"首页",href:"#",active:!0},{label:"技术博客",href:"blog.html",active:!1}],C="https://github.com/EMU-Stu/EMU-Stu-Site",g={related:[{label:"学校官网",href:"#"},{label:"教务系统",href:"#"},{label:"图书馆",href:"#"}],bottom:[{label:"想知道此网站是如何实现的？点击查看文章",href:C,underline:!0}]};class T extends HTMLElement{constructor(){super(...arguments);l(this,"_menuOpen",!1)}connectedCallback(){this.classList.add("sticky","top-0","z-50","block","w-full"),this.render(),this.setupEventListeners()}render(){const e=window.location.pathname.includes("blog.html")||window.location.pathname.endsWith("/blog"),t=S.map(s=>{let n=s.href,c=s.active;return e?s.label==="首页"?(n="index.html",c=!1):s.label==="技术博客"&&(n="#",c=!0):s.label==="首页"?(n="#",c=!0):s.label==="技术博客"&&(n="blog.html",c=!1),{label:s.label,href:n,active:c}}),r=t.map(s=>`
       <a
         class="${s.active?"text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1":"text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200"} font-label-md text-label-md"
         href="${s.href}"
@@ -19,7 +19,7 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
             <img
               alt="EMU-Stu Logo"
               class="h-12 w-auto object-contain transition-transform duration-300 hover:rotate-12"
-              src="${f}"
+              src="${x}"
             >
             <span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim tracking-tight">
               ${w}
@@ -63,13 +63,14 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
             <a
               href="https://github.com/EMU-Stu"
               target="_blank"
-              class="hidden md:flex bg-gradient-to-r from-primary to-[#003380] hover:from-[#003380] hover:to-primary text-on-primary font-label-md text-label-md px-5 py-2.5 rounded-xl transition-all duration-300 transform hover:scale-[1.03] shadow-md hover:shadow-lg items-center gap-2"
+              class="flex bg-gradient-to-r from-primary to-[#003380] hover:from-[#003380] hover:to-primary text-on-primary font-label-md text-label-md p-2.5 md:px-5 md:py-2.5 rounded-xl transition-all duration-300 transform hover:scale-[1.03] shadow-md hover:shadow-lg items-center gap-2"
               id="header-github-btn"
+              aria-label="GitHub"
             >
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
-              GitHub
+              <span class="hidden md:inline">GitHub</span>
             </a>
             <button
               class="md:hidden text-on-surface p-2 rounded-lg hover:bg-surface-container-high transition-colors"
@@ -123,7 +124,7 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
           </nav>
         </div>
       </header>
-    `}setupEventListeners(){const e=this.querySelector("#mobile-menu-toggle"),t=this.querySelector("#mobile-menu");e==null||e.addEventListener("click",()=>{this._menuOpen=!this._menuOpen;const r=e.querySelector(".material-symbols-outlined");this._menuOpen?(t==null||t.classList.remove("max-h-0","opacity-0"),t==null||t.classList.add("max-h-[500px]","opacity-100"),r&&(r.textContent="close"),e.setAttribute("aria-expanded","true"),e.setAttribute("aria-label","关闭菜单")):(t==null||t.classList.add("max-h-0","opacity-0"),t==null||t.classList.remove("max-h-[500px]","opacity-100"),r&&(r.textContent="menu"),e.setAttribute("aria-expanded","false"),e.setAttribute("aria-label","打开菜单"))})}}customElements.define("emu-header",T);class P extends HTMLElement{connectedCallback(){this.render(),this.setupEventListeners()}render(){this.innerHTML=`
+    `}setupEventListeners(){const e=this.querySelector("#mobile-menu-toggle"),t=this.querySelector("#mobile-menu");e==null||e.addEventListener("click",()=>{this._menuOpen=!this._menuOpen;const r=e.querySelector(".material-symbols-outlined");this._menuOpen?(t==null||t.classList.remove("max-h-0","opacity-0"),t==null||t.classList.add("max-h-[500px]","opacity-100"),r&&(r.textContent="close"),e.setAttribute("aria-expanded","true"),e.setAttribute("aria-label","关闭菜单")):(t==null||t.classList.add("max-h-0","opacity-0"),t==null||t.classList.remove("max-h-[500px]","opacity-100"),r&&(r.textContent="menu"),e.setAttribute("aria-expanded","false"),e.setAttribute("aria-label","打开菜单"))})}}customElements.define("emu-header",T);class j extends HTMLElement{connectedCallback(){this.render(),this.setupEventListeners()}render(){this.innerHTML=`
       <section
         class="relative bg-gradient-to-br from-primary via-[#0a2e6b] to-[#001233] py-28 md:py-44 px-margin-mobile md:px-margin-desktop text-center overflow-hidden text-white"
         id="hero-section"
@@ -139,7 +140,7 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
         <img
           alt="Watermark"
           class="absolute -right-20 top-20 opacity-5 w-[500px] h-auto pointer-events-none select-none"
-          src="${f}"
+          src="${x}"
         >
 
         <!-- 内容区 -->
@@ -193,44 +194,14 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
         <!-- 彩蛋标语展示容器 -->
         <div id="hero-easter-egg-container" class="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none opacity-0 transition-all duration-1000 ease-in-out translate-y-8"></div>
       </section>
-    `}setupEventListeners(){const i=this.querySelector("#hero-join-btn"),e=this.querySelector("#hero-projects-btn"),t=this.querySelector("#hero-portals-btn"),r=this.querySelector("#hero-labs-btn");i==null||i.addEventListener("click",()=>{var a;(a=document.querySelector("#about-section"))==null||a.scrollIntoView({behavior:"smooth"})}),e==null||e.addEventListener("click",()=>{var a;(a=document.querySelector("#projects-section"))==null||a.scrollIntoView({behavior:"smooth"})}),t==null||t.addEventListener("click",()=>{var a;(a=document.querySelector("#portals-section"))==null||a.scrollIntoView({behavior:"smooth"})}),r==null||r.addEventListener("click",()=>{var a;(a=document.querySelector("#labs-section"))==null||a.scrollIntoView({behavior:"smooth"})})}}customElements.define("emu-hero",P);const M=[{icon:"restaurant",title:"校园食堂",description:"今日吃什么？查看各大食堂菜谱与就餐反馈",href:"#",soon:!1},{icon:"diversity_3",title:"校园社团",description:"了解校园缤纷社团，发现你的兴趣所在",href:"#",soon:!1},{icon:"map",title:"校园地图",description:"手绘与数字校园地图，快速定位教学楼与宿舍",href:"#"},{icon:"download",title:"资料下载",description:"校园常用表格、课件、软件及办公模版快速下载",href:"#"}],v={newFeatureRequest:"https://acnpe6t9x5o7.feishu.cn/share/base/form/shrcn3EmVQLykJnNfFimFwNGRsg",featureFeedback:"https://acnpe6t9x5o7.feishu.cn/share/base/form/shrcn5HRkWpziz9ddvthLFAqbQE"};class j extends HTMLElement{constructor(){super(...arguments);o(this,"handleClick",e=>{this.getAttribute("soon")==="true"&&e.preventDefault()})}static get observedAttributes(){return["icon","title","description","href","soon"]}connectedCallback(){this.style.display="block",this.render(),this.addEventListener("click",this.handleClick)}disconnectedCallback(){this.removeEventListener("click",this.handleClick)}attributeChangedCallback(){this.isConnected&&this.render()}render(){const e=this.getAttribute("icon")||"help",t=this.getAttribute("title")||"",r=this.getAttribute("description")||"",a=this.getAttribute("href")||"#",s=this.getAttribute("soon")==="true",n=s?"group flex flex-col items-center justify-center text-center gap-4 h-full bg-surface-container-lowest border border-outline-variant/60 rounded-xl p-8 shadow-sm relative overflow-hidden cursor-not-allowed select-none opacity-60":"group flex flex-col items-center justify-center text-center gap-4 h-full bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 relative overflow-hidden",l=s?"":'<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>',p=s?"w-16 h-16 rounded-full bg-secondary-container/60 text-secondary/70 flex items-center justify-center relative z-10":"w-16 h-16 rounded-full bg-secondary-container text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary group-hover:scale-110 transition-all duration-300 relative z-10",d=s?"font-headline-md text-headline-md text-on-surface/70 relative z-10":"font-headline-md text-headline-md text-on-surface relative z-10 group-hover:text-primary transition-colors duration-300",m=s?"text-xs md:text-sm text-on-surface-variant/60 relative z-10 line-clamp-2 max-w-[240px] leading-relaxed":"text-xs md:text-sm text-on-surface-variant/80 relative z-10 line-clamp-2 max-w-[240px] leading-relaxed",u=s?`
-        <div class="absolute top-3 right-3 bg-secondary-container text-on-secondary-container text-[10px] font-semibold px-2 py-0.5 rounded-full select-none border border-outline-variant/40 z-20">
-          即将推出
-        </div>
-      `:"";this.innerHTML=`
-      <a
-        class="${n}"
-        href="${s?"javascript:void(0)":a}"
-      >
-        <!-- 悬浮渐变遮罩 -->
-        ${l}
-
-        <!-- 静态即将推出 Badge -->
-        ${u}
-
-        <!-- 图标容器 -->
-        <div class="${p}">
-          <span class="material-symbols-outlined text-3xl">${e}</span>
-        </div>
-
-        <!-- 标题 -->
-        <h3 class="${d}">${t}</h3>
-
-        <!-- 一句话介绍 -->
-        ${r?`
-          <p class="${m}">
-            ${r}
-          </p>
-        `:""}
-      </a>
-    `}}customElements.define("emu-portal-card",j);const H="/assets/survey-qrcode-feature-feedbck-CXXN6x3o.png",q="/assets/survey-qrcode-new-feature-request-DULuK1K3.png";class A extends HTMLElement{connectedCallback(){this.render(),this.initFeedbackDialog()}render(){const i=M.map(e=>`
-      <emu-portal-card
+    `}setupEventListeners(){const i=this.querySelector("#hero-join-btn"),e=this.querySelector("#hero-projects-btn"),t=this.querySelector("#hero-portals-btn"),r=this.querySelector("#hero-labs-btn");i==null||i.addEventListener("click",()=>{var a;(a=document.querySelector("#about-section"))==null||a.scrollIntoView({behavior:"smooth"})}),e==null||e.addEventListener("click",()=>{var a;(a=document.querySelector("#projects-section"))==null||a.scrollIntoView({behavior:"smooth"})}),t==null||t.addEventListener("click",()=>{var a;(a=document.querySelector("#portals-section"))==null||a.scrollIntoView({behavior:"smooth"})}),r==null||r.addEventListener("click",()=>{var a;(a=document.querySelector("#labs-section"))==null||a.scrollIntoView({behavior:"smooth"})})}}customElements.define("emu-hero",j);const P=[{icon:"restaurant",title:"校园食堂",description:"今日吃什么？查看各大食堂菜谱与就餐反馈",href:"#",soon:!1},{icon:"diversity_3",title:"校园社团",description:"了解校园缤纷社团，发现你的兴趣所在",href:"#",soon:!1},{icon:"map",title:"校园地图",description:"手绘与数字校园地图，快速定位教学楼与宿舍",href:"#"},{icon:"download",title:"资料下载",description:"校园常用表格、课件、软件及办公模版快速下载",href:"#"}],v={newFeatureRequest:"https://acnpe6t9x5o7.feishu.cn/share/base/form/shrcn3EmVQLykJnNfFimFwNGRsg",featureFeedback:"https://acnpe6t9x5o7.feishu.cn/share/base/form/shrcn5HRkWpziz9ddvthLFAqbQE"},M="/assets/survey-qrcode-feature-feedbck-CXXN6x3o.png",H="/assets/survey-qrcode-new-feature-request-DULuK1K3.png";class q extends HTMLElement{connectedCallback(){this.render(),this.initFeedbackDialog()}render(){const i=P.map(e=>`
+      <emu-service-card
         icon="${e.icon}"
         title="${e.title}"
         description="${e.description}"
         href="${e.href}"
         soon="${"soon"in e&&e.soon?"true":"false"}"
-      ></emu-portal-card>
+      ></emu-service-card>
     `).join("");this.innerHTML=`
       <section class="py-20 px-margin-mobile md:px-margin-desktop relative" id="portals-container">
         <!-- 装饰性光晕背景（浅） -->
@@ -267,8 +238,8 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
             </div>
           </div>
 
-          <!-- 卡片网格（对齐 gap-6） -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- 卡片网格（移动端展示为 2 列） -->
+          <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             ${i}
           </div>
         </div>
@@ -307,7 +278,7 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
             >
               <div class="overflow-hidden rounded-2xl shadow-md border border-outline-variant/10 group-hover:shadow-lg group-hover:border-primary/20 transition-all duration-300 bg-white">
                 <img
-                  src="${q}"
+                  src="${H}"
                   alt="新功能请求"
                   class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                 />
@@ -326,7 +297,7 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
             >
               <div class="overflow-hidden rounded-2xl shadow-md border border-outline-variant/10 group-hover:shadow-lg group-hover:border-primary/20 transition-all duration-300 bg-white">
                 <img
-                  src="${H}"
+                  src="${M}"
                   alt="功能反馈"
                   class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                 />
@@ -344,7 +315,37 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
           </div>
         </div>
       </dialog>
-    `}initFeedbackDialog(){const i=this.querySelector("#feedback-trigger"),e=this.querySelector("#feedback-dialog"),t=this.querySelector("#dialog-close-btn");if(!i||!e)return;i.addEventListener("click",a=>{a.preventDefault(),e.showModal(),document.body.style.overflow="hidden"});const r=()=>{e.close()};t&&t.addEventListener("click",r),e.addEventListener("close",()=>{document.body.style.overflow=""}),e.addEventListener("click",a=>{a.target===e&&r()})}}customElements.define("emu-portal-grid",A);const O=[{name:"EmergencyTeleoperatedRobotSystem-Jetson",description:"应急遥操作机器人系统 Jetson 端：机器人主控核心，负责为客户端提供三维场景重建与目标检测功能，以及接收和处理来自客户端的控制指令。",languages:["C++","Python"],stars:48,color:"#3572A5",href:"https://github.com/EMU-Stu/EmergencyTeleoperatedRobotSystem-Jetson"},{name:"EmergencyTeleoperatedRobotSystem-Unity",description:"应急遥操作机器人系统 Unity 端：机器人控制客户端，基于 MRTK 框架并面向 HoloLens 2 平台开发，提供 3D 虚拟孪生、遥操作与三维现场呈现。",languages:["C#"],stars:62,color:"#178600",href:"https://github.com/EMU-Stu/EmergencyTeleoperatedRobotSystem-Unity"},{name:"skills",description:"校园相关 Agent Skills。",languages:["Markdown"],stars:128,color:"#083fa6",href:"https://github.com/EMU-Stu/skills"},{name:"EMU-Stu-Site",description:"EMU-Stu 官网源码。",languages:["TypeScript","HTML","CSS"],stars:35,color:"#3178c6",href:"https://github.com/EMU-Stu/EMU-Stu-Site"},{name:"CUEDC-2024-Drone-code",description:"2024 年全国大学生电子设计竞赛无人机赛题方案。基于 Fast-LIO 激光 SLAM 实现室内自主定位，融合 PX4 飞控、STM32 下位机路径规划 与 OpenMV 视觉识别，完成自主航点飞行与目标检测任务。",languages:["C"],stars:56,color:"#555555",href:"https://github.com/EMU-Stu/CUEDC-2024-Drone-code"}];class z extends HTMLElement{constructor(){super(...arguments);o(this,"_displayedProjects",[])}connectedCallback(){this.shuffleProjects(),this.render(),this.setupEventListeners()}shuffleProjects(){const e=[...O];for(let t=e.length-1;t>0;t--){const r=Math.floor(Math.random()*(t+1));[e[t],e[r]]=[e[r],e[t]]}this._displayedProjects=e.slice(0,4)}getLanguageColor(e,t){return{TypeScript:"#3178c6",JavaScript:"#f1e05a",HTML:"#e34c26",CSS:"#563d7c","C#":"#178600","C++":"#f34b7d",C:"#555555",Python:"#3572A5",Markdown:"#083fa6"}[e]||t}generateCardHtml(e){const t=e.languages.map(r=>`
+    `}initFeedbackDialog(){const i=this.querySelector("#feedback-trigger"),e=this.querySelector("#feedback-dialog"),t=this.querySelector("#dialog-close-btn");if(!i||!e)return;i.addEventListener("click",a=>{a.preventDefault(),e.showModal(),document.body.style.overflow="hidden"});const r=()=>{e.close()};t&&t.addEventListener("click",r),e.addEventListener("close",()=>{document.body.style.overflow=""}),e.addEventListener("click",a=>{a.target===e&&r()})}}customElements.define("emu-services",q);class A extends HTMLElement{constructor(){super(...arguments);l(this,"handleClick",e=>{this.getAttribute("soon")==="true"&&e.preventDefault()})}static get observedAttributes(){return["icon","title","description","href","soon"]}connectedCallback(){this.style.display="block",this.render(),this.addEventListener("click",this.handleClick)}disconnectedCallback(){this.removeEventListener("click",this.handleClick)}attributeChangedCallback(){this.isConnected&&this.render()}render(){const e=this.getAttribute("icon")||"help",t=this.getAttribute("title")||"",r=this.getAttribute("description")||"",a=this.getAttribute("href")||"#",s=this.getAttribute("soon")==="true",n=s?"group flex flex-col items-center justify-center text-center gap-2 md:gap-4 h-full bg-surface-container-lowest border border-outline-variant/60 rounded-xl p-4 md:p-8 shadow-sm relative overflow-hidden cursor-not-allowed select-none opacity-60":"group flex flex-col items-center justify-center text-center gap-2 md:gap-4 h-full bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-8 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 relative overflow-hidden",c=s?"":'<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>',d=s?"w-12 h-12 md:w-16 md:h-16 rounded-full bg-secondary-container/60 text-secondary/70 flex items-center justify-center relative z-10":"w-12 h-12 md:w-16 md:h-16 rounded-full bg-secondary-container text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary group-hover:scale-110 transition-all duration-300 relative z-10",m=s?"font-headline-md text-base md:text-headline-md text-on-surface/70 relative z-10":"font-headline-md text-base md:text-headline-md text-on-surface relative z-10 group-hover:text-primary transition-colors duration-300",p=s?"text-xs md:text-sm text-on-surface-variant/60 relative z-10 line-clamp-2 max-w-[240px] leading-relaxed":"text-xs md:text-sm text-on-surface-variant/80 relative z-10 line-clamp-2 max-w-[240px] leading-relaxed",u=s?`
+        <div class="absolute top-1.5 right-1.5 md:top-3 md:right-3 bg-secondary-container text-on-secondary-container text-[8px] md:text-[10px] font-semibold px-1.5 py-0.5 md:px-2 md:py-0.5 rounded-full select-none border border-outline-variant/40 z-20">
+          即将推出
+        </div>
+      `:"";this.innerHTML=`
+      <a
+        class="${n}"
+        href="${s?"javascript:void(0)":a}"
+      >
+        <!-- 悬浮渐变遮罩 -->
+        ${c}
+
+        <!-- 静态即将推出 Badge -->
+        ${u}
+
+        <!-- 图标容器 -->
+        <div class="${d}">
+          <span class="material-symbols-outlined text-xl md:text-3xl">${e}</span>
+        </div>
+
+        <!-- 标题 -->
+        <h3 class="${m}">${t}</h3>
+
+        <!-- 一句话介绍 -->
+        ${r?`
+          <p class="${p}">
+            ${r}
+          </p>
+        `:""}
+      </a>
+    `}}customElements.define("emu-service-card",A);const U=[{name:"EmergencyTeleoperatedRobotSystem-Jetson",description:"应急遥操作机器人系统 Jetson 端：机器人主控核心，负责为客户端提供三维场景重建与目标检测功能，以及接收和处理来自客户端的控制指令。",languages:["C++","Python"],stars:48,color:"#3572A5",href:"https://github.com/EMU-Stu/EmergencyTeleoperatedRobotSystem-Jetson"},{name:"EmergencyTeleoperatedRobotSystem-Unity",description:"应急遥操作机器人系统 Unity 端：机器人控制客户端，基于 MRTK 框架并面向 HoloLens 2 平台开发，提供 3D 虚拟孪生、遥操作与三维现场呈现。",languages:["C#"],stars:62,color:"#178600",href:"https://github.com/EMU-Stu/EmergencyTeleoperatedRobotSystem-Unity"},{name:"skills",description:"校园相关 Agent Skills。",languages:["Markdown"],stars:128,color:"#083fa6",href:"https://github.com/EMU-Stu/skills"},{name:"EMU-Stu-Site",description:"EMU-Stu 官网源码。",languages:["TypeScript","HTML","CSS"],stars:35,color:"#3178c6",href:"https://github.com/EMU-Stu/EMU-Stu-Site"},{name:"CUEDC-2024-Drone-code",description:"2024 年全国大学生电子设计竞赛无人机赛题方案。基于 Fast-LIO 激光 SLAM 实现室内自主定位，融合 PX4 飞控、STM32 下位机路径规划 与 OpenMV 视觉识别，完成自主航点飞行与目标检测任务。",languages:["C"],stars:56,color:"#555555",href:"https://github.com/EMU-Stu/CUEDC-2024-Drone-code"}];class z extends HTMLElement{constructor(){super(...arguments);l(this,"_displayedProjects",[])}connectedCallback(){this.shuffleProjects(),this.render(),this.setupEventListeners()}shuffleProjects(){const e=[...U];for(let t=e.length-1;t>0;t--){const r=Math.floor(Math.random()*(t+1));[e[t],e[r]]=[e[r],e[t]]}this._displayedProjects=e.slice(0,4)}getLanguageColor(e,t){return{TypeScript:"#3178c6",JavaScript:"#f1e05a",HTML:"#e34c26",CSS:"#563d7c","C#":"#178600","C++":"#f34b7d",C:"#555555",Python:"#3572A5",Markdown:"#083fa6"}[e]||t}generateCardHtml(e){const t=e.languages.map(r=>`
         <div class="flex items-center gap-1.5">
           <span class="w-3 h-3 rounded-full" style="background-color: ${this.getLanguageColor(r,e.color)}"></span>
           <span>${r}</span>
@@ -431,76 +432,82 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
           </div>
         </div>
       </section>
-    `}setupEventListeners(){const e=this.querySelector("#projects-shuffle-btn"),t=this.querySelector("#project-cards-container"),r=this.querySelector("#shuffle-icon");e==null||e.addEventListener("click",()=>{r&&(r.classList.add("rotate-180"),setTimeout(()=>r.classList.remove("rotate-180"),500)),t&&(t.style.opacity="0"),setTimeout(()=>{this.shuffleProjects();const a=this._displayedProjects.map(s=>this.generateCardHtml(s)).join("");t&&(t.innerHTML=a,t.style.opacity="1")},300)})}}customElements.define("emu-projects",z);const y=[{name:"物联网实验室（AKA 数字孪生暨虚拟现实实验室）",code:"IoT-Lab",description:"开展物联网架构、嵌入式硬件开发与实时数据采集研究，结合数字孪生与虚拟现实技术实现物理世界的数字化映射。",department:"计算机科学与工程学院",professors:["陈超"],tags:["物联网","数字孪生","虚拟现实","嵌入式"],icon:"sensors"},{name:"河北省安全生产与应急处置特种机器人重点实验室",code:"SER-Lab",description:"致力于应急救援、特种作业机器人的研发，开展智能环境感知、鲁棒控制及人机协作技术等关键课题攻关。",department:"应急管理学院",tags:["特种机器人","应急处置","智能控制","环境感知"],icon:"precision_manufacturing"},{name:"ArkLab方舟实验室",code:"Ark-Lab",description:"专注于学生技术创新与工程实践，覆盖全栈软件开发、算法研究及软硬件协同设计，培养核心技术人才。",department:"电子信息工程学院",tags:["软件工程","算法设计","技术创新","全栈开发"],icon:"sailing"},{name:"利刃网安攻防实验室",code:"Blade-Sec-Lab",description:"聚焦于网络空间安全，开展渗透测试、漏洞挖掘、红蓝对抗以及安全防御体系建设等核心攻防技术研究。",department:"计算机科学与工程学院",tags:["网络安全","漏洞挖掘","红蓝对抗","渗透测试"],icon:"shield_lock"}];class U extends HTMLElement{constructor(){super(...arguments);o(this,"_rafId",0);o(this,"_paused",!1);o(this,"_lastTime",0);o(this,"SPEED",30);o(this,"_bounceOffset",0);o(this,"_resizeObserver",null);o(this,"_scrollingActive",!1);o(this,"_eventListeners",[])}connectedCallback(){this.render(),this.setupResponsiveness()}disconnectedCallback(){this.cleanupScrolling(),this._resizeObserver&&(this._resizeObserver.disconnect(),this._resizeObserver=null)}generateCardHtml(e){const t=e.tags.map(s=>`
+    `}setupEventListeners(){const e=this.querySelector("#projects-shuffle-btn"),t=this.querySelector("#project-cards-container"),r=this.querySelector("#shuffle-icon");e==null||e.addEventListener("click",()=>{r&&(r.classList.add("rotate-180"),setTimeout(()=>r.classList.remove("rotate-180"),500)),t&&(t.style.opacity="0"),setTimeout(()=>{this.shuffleProjects();const a=this._displayedProjects.map(s=>this.generateCardHtml(s)).join("");t&&(t.innerHTML=a,t.style.opacity="1")},300)})}}customElements.define("emu-projects",z);const y=[{name:"物联网实验室（AKA 数字孪生暨虚拟现实实验室）",code:"IoT-Lab",description:"开展物联网架构、嵌入式硬件开发与实时数据采集研究，结合数字孪生与虚拟现实技术实现物理世界的数字化映射。",department:"计算机科学与工程学院",professors:["陈超"],tags:["物联网","数字孪生","虚拟现实","嵌入式"],icon:"sensors"},{name:"河北省安全生产与应急处置特种机器人重点实验室",code:"SER-Lab",description:"致力于应急救援、特种作业机器人的研发，开展智能环境感知、鲁棒控制及人机协作技术等关键课题攻关。",department:"应急管理学院",tags:["特种机器人","应急处置","智能控制","环境感知"],icon:"precision_manufacturing"},{name:"ArkLab方舟实验室",code:"Ark-Lab",description:"专注于学生技术创新与工程实践，覆盖全栈软件开发、算法研究及软硬件协同设计，培养核心技术人才。",department:"电子信息工程学院",tags:["软件工程","算法设计","技术创新","全栈开发"],icon:"sailing"},{name:"利刃网安攻防实验室",code:"Blade-Sec-Lab",description:"聚焦于网络空间安全，开展渗透测试、漏洞挖掘、红蓝对抗以及安全防御体系建设等核心攻防技术研究。",department:"计算机科学与工程学院",tags:["网络安全","漏洞挖掘","红蓝对抗","渗透测试"],icon:"shield_lock"}];class O extends HTMLElement{constructor(){super(...arguments);l(this,"_resizeObserver",null)}connectedCallback(){this.render(),this.setupResponsiveness()}disconnectedCallback(){this._resizeObserver&&(this._resizeObserver.disconnect(),this._resizeObserver=null)}generateCardHtml(e){const t=e.tags.map(s=>`
         <span
-          class="inline-block text-xs font-mono px-2.5 py-0.5 rounded-lg border border-primary/15 text-primary/80 bg-primary/5 transition-colors duration-300 whitespace-nowrap"
+          class="inline-block text-[10px] md:text-xs font-mono px-2 py-0.5 rounded-lg border border-primary/15 text-primary/80 bg-primary/5 transition-colors duration-300 whitespace-nowrap"
         >${s}</span>
       `).join(""),r=e.href?"a":"div",a=e.href?`href="${e.href}" target="_blank"`:"";return`
       <${r}
         ${a}
-        class="labs-card border border-outline-variant/20 rounded-2xl p-7 bg-surface-container-lowest hover:border-primary/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative group ${e.href?"cursor-pointer":""}"
+        class="labs-card border border-outline-variant/20 rounded-2xl p-5 md:p-7 bg-surface-container-lowest hover:border-primary/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative group ${e.href?"cursor-pointer":""}"
       >
         <div>
           <!-- 头部：图标、实验室代号与名称 -->
-          <div class="flex items-start justify-between mb-4">
+          <div class="flex items-start justify-between mb-2.5 md:mb-4">
             <div class="flex items-center gap-3">
               <!-- 图标容器 -->
               <div
-                class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 bg-primary/10 transition-transform duration-300 group-hover:scale-110"
+                class="w-10 h-10 md:w-11 md:h-11 rounded-xl flex items-center justify-center shrink-0 bg-primary/10 transition-transform duration-300 group-hover:scale-110"
               >
                 <span
-                  class="material-symbols-outlined text-[24px] text-primary"
+                  class="material-symbols-outlined text-[20px] md:text-[24px] text-primary"
                 >${e.icon}</span>
               </div>
-              <div>
-                <span class="font-mono text-xs tracking-tight text-on-surface-variant/60 block">${e.code}</span>
-                <span class="font-bold text-on-surface text-base leading-snug group-hover:text-primary transition-colors duration-300">${e.name}</span>
+              <div class="min-w-0">
+                <span class="font-mono text-[10px] md:text-xs tracking-tight text-on-surface-variant/60 block truncate">${e.code}</span>
+                <h3 class="font-bold text-on-surface text-sm md:text-base leading-snug group-hover:text-primary transition-colors duration-300 line-clamp-2" title="${e.name}">${e.name}</h3>
               </div>
             </div>
 
-            ${e.href?'<span class="material-symbols-outlined text-[18px] text-on-surface-variant/40 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0 mt-1">north_east</span>':""}
+            ${e.href?'<span class="material-symbols-outlined text-[16px] md:text-[18px] text-on-surface-variant/40 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0 mt-1">north_east</span>':""}
           </div>
 
           <!-- 实验室介绍 -->
-          <p class="text-on-surface-variant text-sm leading-relaxed mb-4 line-clamp-4" title="${e.description}">
+          <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed mb-2.5 md:mb-4 line-clamp-2 md:line-clamp-4" title="${e.description}">
             ${e.description}
           </p>
         </div>
 
         <div>
           <!-- 指导教师与所属院系 -->
-          <div class="flex flex-col gap-2 text-xs text-on-surface-variant/70 mb-4">
+          <div class="flex flex-col gap-1.5 md:gap-2 text-[11px] md:text-xs text-on-surface-variant/70 mb-2.5 md:mb-4">
             ${e.advisor?`
             <div class="flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-[14px]">person</span>
-              <span>${e.advisor}</span>
+               <span class="material-symbols-outlined text-[12px] md:text-[14px]">person</span>
+              <span class="truncate">${e.advisor}</span>
             </div>
             `:""}
             ${e.professors?`
             <div class="flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-[14px]">school</span>
-              <span>教授：${Array.isArray(e.professors)?e.professors.join("、"):e.professors}</span>
+              <span class="material-symbols-outlined text-[12px] md:text-[14px]">school</span>
+              <span class="truncate">教授：${Array.isArray(e.professors)?e.professors.join("、"):e.professors}</span>
             </div>
             `:""}
             <div class="flex items-start gap-1.5">
-              <span class="material-symbols-outlined text-[14px] mt-0.5">apartment</span>
-              <span class="leading-relaxed">${e.department}</span>
+              <span class="material-symbols-outlined text-[12px] md:text-[14px] mt-0.5">apartment</span>
+              <span class="leading-relaxed line-clamp-1">${e.department}</span>
             </div>
           </div>
 
           <!-- 底部标签栏 -->
-          <div class="flex items-center gap-2 pt-3 border-t border-outline-variant/10 flex-wrap">
+          <div class="flex items-center gap-1.5 pt-2.5 border-t border-outline-variant/10 flex-wrap">
             ${t}
           </div>
         </div>
       </${r}>
     `}render(){const e=y.map(t=>this.generateCardHtml(t)).join("");this.innerHTML=`
       <style>
-        /* 卡片固定宽度与高度，防止被 flex 压缩 */
+        /* 卡片固定宽度，高度自适应，由 flexbox 自动拉伸等高 */
         .labs-card {
-          width: 380px;
-          height: 340px;
+          width: 280px;
+          height: auto;
           flex-shrink: 0;
+        }
+        @media (min-width: 768px) {
+          .labs-card {
+            width: 380px;
+            height: 340px;
+          }
         }
 
         /* 滚动容器 */
@@ -508,10 +515,11 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
           overflow-x: hidden;
           -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
           mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+          -webkit-overflow-scrolling: touch;
         }
 
-        /* 悬停时仅在滚动激活时允许手动滚动，隐藏滚动条 */
-        .labs-marquee-wrapper.scroll-active:hover {
+        /* 滚动激活时允许手动滚动，隐藏滚动条 */
+        .labs-marquee-wrapper.scroll-active {
           overflow-x: auto;
         }
         .labs-marquee-wrapper::-webkit-scrollbar {
@@ -524,11 +532,17 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
 
         .labs-marquee-track {
           display: flex;
-          gap: 1.5rem;
+          gap: 1rem;
           width: max-content;
-          padding-left: 60px;
-          padding-right: 60px;
-          transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        @media (min-width: 768px) {
+          .labs-marquee-track {
+            gap: 1.5rem;
+            padding-left: 60px;
+            padding-right: 60px;
+          }
         }
       </style>
 
@@ -561,7 +575,7 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
           </div>
         </div>
       </section>
-    `}setupResponsiveness(){const e=this.querySelector("#labs-marquee"),t=this.querySelector("#labs-track");if(!e||!t)return;const r=y.map(a=>this.generateCardHtml(a)).join("");this._resizeObserver=new ResizeObserver(()=>{this.cleanupScrolling(),t.style.justifyContent="center",t.innerHTML=r,e.classList.remove("scroll-active");const a=e.clientWidth;t.scrollWidth>a?(e.classList.add("scroll-active"),t.style.justifyContent="flex-start",t.innerHTML=r+r,this.initScrolling(e,t)):e.scrollLeft=0}),this._resizeObserver.observe(e)}addEvent(e,t,r,a){e.addEventListener(t,r,a),this._eventListeners.push({target:e,type:t,listener:r,options:a})}cleanupScrolling(){cancelAnimationFrame(this._rafId),this._rafId=0,this._paused=!1,this._lastTime=0,this._bounceOffset=0,this._scrollingActive=!1,this._eventListeners.forEach(({target:t,type:r,listener:a,options:s})=>{t.removeEventListener(r,a,s)}),this._eventListeners=[];const e=this.querySelector("#labs-track");e&&(e.style.transform="",e.style.transition="")}initScrolling(e,t){this._scrollingActive=!0,this.addEvent(e,"mouseenter",()=>{this._paused=!0,t.style.transition="none"}),this.addEvent(e,"mouseleave",()=>{this._paused=!1,this._lastTime=0,Math.abs(this._bounceOffset)>.1&&(t.style.transition="transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)",t.style.transform="",this._bounceOffset=0,setTimeout(()=>{!this._paused&&this._scrollingActive&&(t.style.transition="none")},400))}),this.addEvent(e,"wheel",a=>{if(!this._paused)return;const s=a;s.preventDefault();const n=s.deltaY||s.deltaX,l=e.scrollWidth-e.clientWidth,d=e.scrollLeft+n;if(d<0){e.scrollLeft=0;const m=d;this._bounceOffset=Math.max(-80,m*.25)}else if(d>l){e.scrollLeft=l;const m=d-l;this._bounceOffset=Math.min(80,m*.25)}else this._bounceOffset=0,e.scrollLeft=d;t.style.transform=`translate3d(${-this._bounceOffset}px, 0, 0)`},{passive:!1});const r=a=>{if(!this._scrollingActive)return;if(this._rafId=requestAnimationFrame(r),this._paused){this._lastTime=0,Math.abs(this._bounceOffset)>.1?(this._bounceOffset*=.85,t.style.transform=`translate3d(${-this._bounceOffset}px, 0, 0)`):this._bounceOffset!==0&&(this._bounceOffset=0,t.style.transform="");return}if(!this._lastTime){this._lastTime=a;return}const s=(a-this._lastTime)/1e3;this._lastTime=a,this._bounceOffset!==0&&(this._bounceOffset=0,t.style.transform=""),e.scrollLeft+=this.SPEED*s;const n=t.scrollWidth/2;e.scrollLeft>=n&&(e.scrollLeft-=n)};this._rafId=requestAnimationFrame(r)}}customElements.define("emu-labs",U);const F=[];class I extends HTMLElement{constructor(){super(...arguments);o(this,"_currentCategory","全部");o(this,"_searchQuery","");o(this,"_currentPage",1);o(this,"_postsPerPage",4);o(this,"_categories",["全部","后端开发","前端架构","AI/ML","应急科技","开源治理"])}connectedCallback(){this.render(),this.setupEventListeners()}getFilteredPosts(){return F.filter(e=>{const t=this._currentCategory==="全部"||e.category===this._currentCategory,r=this._searchQuery.trim().toLowerCase(),a=!r||e.title.toLowerCase().includes(r)||e.excerpt.toLowerCase().includes(r);return t&&a})}generatePostHtml(e){return`
+    `}setupResponsiveness(){const e=this.querySelector("#labs-marquee"),t=this.querySelector("#labs-track");if(!e||!t)return;const r=y.map(a=>this.generateCardHtml(a)).join("");this._resizeObserver=new ResizeObserver(()=>{t.style.justifyContent="center",t.innerHTML=r,e.classList.remove("scroll-active");const a=e.clientWidth;t.scrollWidth>a?(e.classList.add("scroll-active"),t.style.justifyContent="flex-start"):e.scrollLeft=0}),this._resizeObserver.observe(e)}}customElements.define("emu-labs",O);const F=[];class N extends HTMLElement{constructor(){super(...arguments);l(this,"_currentCategory","全部");l(this,"_searchQuery","");l(this,"_currentPage",1);l(this,"_postsPerPage",4);l(this,"_categories",["全部","后端开发","前端架构","AI/ML","应急科技","开源治理"])}connectedCallback(){this.render(),this.setupEventListeners()}getFilteredPosts(){return F.filter(e=>{const t=this._currentCategory==="全部"||e.category===this._currentCategory,r=this._searchQuery.trim().toLowerCase(),a=!r||e.title.toLowerCase().includes(r)||e.excerpt.toLowerCase().includes(r);return t&&a})}generatePostHtml(e){return`
       <a 
         href="${e.href}" 
         class="block group border-b border-outline-variant/15 py-8 transition-all duration-300"
@@ -717,13 +731,13 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
 
         </div>
       </section>
-    `}refreshList(){const e=this.querySelector("#blog-posts-list"),t=this.querySelector("#blog-pagination-container"),r=this.getFilteredPosts(),a=Math.ceil(r.length/this._postsPerPage);this._currentPage>a&&a>0&&(this._currentPage=1);const s=(this._currentPage-1)*this._postsPerPage,n=r.slice(s,s+this._postsPerPage);e&&(e.style.opacity="0"),setTimeout(()=>{e&&(n.length>0?e.innerHTML=n.map(l=>this.generatePostHtml(l)).join(""):e.innerHTML=`
+    `}refreshList(){const e=this.querySelector("#blog-posts-list"),t=this.querySelector("#blog-pagination-container"),r=this.getFilteredPosts(),a=Math.ceil(r.length/this._postsPerPage);this._currentPage>a&&a>0&&(this._currentPage=1);const s=(this._currentPage-1)*this._postsPerPage,n=r.slice(s,s+this._postsPerPage);e&&(e.style.opacity="0"),setTimeout(()=>{e&&(n.length>0?e.innerHTML=n.map(c=>this.generatePostHtml(c)).join(""):e.innerHTML=`
             <div class="flex flex-col items-center justify-center py-20 text-center text-on-surface-variant/50 dark:text-surface-variant/50">
               <span class="material-symbols-outlined text-[48px] mb-4">search_off</span>
               <p class="text-base font-semibold">没有找到相关的技术博客文章</p>
               <p class="text-xs mt-1 text-on-surface-variant/40 dark:text-surface-variant/40">尝试更换搜索词或选择其他分类标签</p>
             </div>
-          `,e.style.opacity="1"),t&&(t.innerHTML=this.generatePaginationHtml(a),this.setupPaginationListeners())},200)}setupEventListeners(){this.addEventListener("click",t=>{const a=t.target.closest(".category-tab");if(a){const s=a.dataset.category||"全部";this._currentCategory!==s&&(this._currentCategory=s,this._currentPage=1,this.querySelectorAll(".category-tab").forEach(l=>{l.className="category-tab px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-300 bg-surface-container hover:bg-surface-container-high text-on-surface-variant dark:text-surface-variant dark:bg-surface-container/30 dark:hover:bg-surface-container/50"}),a.className="category-tab px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-300 bg-primary text-on-primary shadow-sm dark:bg-primary-fixed dark:text-on-primary-fixed",this.refreshList())}});const e=this.querySelector("#blog-search-input");e==null||e.addEventListener("input",()=>{this._searchQuery=e.value,this._currentPage=1,this.refreshList()}),this.setupPaginationListeners()}setupPaginationListeners(){const e=this.querySelector("#blog-prev-btn");e==null||e.addEventListener("click",()=>{this._currentPage>1&&(this._currentPage--,this.refreshList(),this.scrollToTop())});const t=this.querySelector("#blog-next-btn");t==null||t.addEventListener("click",()=>{const a=this.getFilteredPosts(),s=Math.ceil(a.length/this._postsPerPage);this._currentPage<s&&(this._currentPage++,this.refreshList(),this.scrollToTop())}),this.querySelectorAll(".page-num-btn").forEach(a=>{a.addEventListener("click",()=>{const s=parseInt(a.dataset.page||"1",10);this._currentPage!==s&&(this._currentPage=s,this.refreshList(),this.scrollToTop())})})}scrollToTop(){const e=this.querySelector("#blog-container");e&&e.scrollIntoView({behavior:"smooth",block:"start"})}}customElements.define("emu-blog",I);class N extends HTMLElement{connectedCallback(){this.render()}render(){const i=g.related.map(t=>`
+          `,e.style.opacity="1"),t&&(t.innerHTML=this.generatePaginationHtml(a),this.setupPaginationListeners())},200)}setupEventListeners(){this.addEventListener("click",t=>{const a=t.target.closest(".category-tab");if(a){const s=a.dataset.category||"全部";this._currentCategory!==s&&(this._currentCategory=s,this._currentPage=1,this.querySelectorAll(".category-tab").forEach(c=>{c.className="category-tab px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-300 bg-surface-container hover:bg-surface-container-high text-on-surface-variant dark:text-surface-variant dark:bg-surface-container/30 dark:hover:bg-surface-container/50"}),a.className="category-tab px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-300 bg-primary text-on-primary shadow-sm dark:bg-primary-fixed dark:text-on-primary-fixed",this.refreshList())}});const e=this.querySelector("#blog-search-input");e==null||e.addEventListener("input",()=>{this._searchQuery=e.value,this._currentPage=1,this.refreshList()}),this.setupPaginationListeners()}setupPaginationListeners(){const e=this.querySelector("#blog-prev-btn");e==null||e.addEventListener("click",()=>{this._currentPage>1&&(this._currentPage--,this.refreshList(),this.scrollToTop())});const t=this.querySelector("#blog-next-btn");t==null||t.addEventListener("click",()=>{const a=this.getFilteredPosts(),s=Math.ceil(a.length/this._postsPerPage);this._currentPage<s&&(this._currentPage++,this.refreshList(),this.scrollToTop())}),this.querySelectorAll(".page-num-btn").forEach(a=>{a.addEventListener("click",()=>{const s=parseInt(a.dataset.page||"1",10);this._currentPage!==s&&(this._currentPage=s,this.refreshList(),this.scrollToTop())})})}scrollToTop(){const e=this.querySelector("#blog-container");e&&e.scrollIntoView({behavior:"smooth",block:"start"})}}customElements.define("emu-blog",N);class R extends HTMLElement{connectedCallback(){this.render()}render(){const i=g.related.map(t=>`
         <li>
           <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="${t.href}">
             ${t.label}
@@ -746,7 +760,7 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
                 <img
                   alt="EMU-Stu Logo"
                   class="h-8 w-auto object-contain opacity-60 dark:opacity-80 transition-opacity hover:opacity-100"
-                  src="${f}"
+                  src="${x}"
                 >
                 <span class="font-headline-md text-lg font-bold text-on-surface dark:text-surface-bright tracking-tight">
                   ${w}
@@ -800,7 +814,7 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
           </div>
         </div>
       </footer>
-    `}}customElements.define("emu-footer",N);class R extends HTMLElement{constructor(){super(...arguments);o(this,"_clickCount",0);o(this,"_clickTimer",null);o(this,"_inputBuffer",[]);o(this,"_isActive",!1)}connectedCallback(){this.setupStyles(),this.setupEventListeners(),console.log('[EMU-Stu] Win气泡彩蛋已加载。提示：连击 Logo 3次 或键盘输入 "win" 触发！')}setupStyles(){const e=document.createElement("style");e.textContent=`
+    `}}customElements.define("emu-footer",R);class I extends HTMLElement{constructor(){super(...arguments);l(this,"_clickCount",0);l(this,"_clickTimer",null);l(this,"_inputBuffer",[]);l(this,"_isActive",!1)}connectedCallback(){this.setupStyles(),this.setupEventListeners(),console.log('[EMU-Stu] Win气泡彩蛋已加载。提示：连击 Logo 3次 或键盘输入 "win" 触发！')}setupStyles(){const e=document.createElement("style");e.textContent=`
       /* win 气泡外层容器，只负责屏幕定位和无顿挫的平滑位移 */
       .win-bubble-wrapper {
         position: fixed;
@@ -907,5 +921,5 @@ var _=Object.defineProperty;var L=(c,i,e)=>i in c?_(c,i,{enumerable:!0,configura
           >
             应大冲鸭！
           </div>
-        `,t.style.opacity="1",t.style.transform="translateY(0)",requestAnimationFrame(()=>{const r=t.querySelector(".easter-egg-line1"),a=t.querySelector(".easter-egg-line2");r&&(r.style.opacity="1",r.style.transform="translateY(0)"),a&&(a.style.opacity="1",a.style.transform="translateY(0)")}))},1e3),setTimeout(()=>{this.restoreHero()},6e3)}spawnWinBubbles(){const t=document.createDocumentFragment(),r=[];for(let a=0;a<50;a++){const s=document.createElement("div");s.className="win-bubble-wrapper";const n=document.createElement("div"),l=Math.random()>.5?"bubble-right":"bubble-left";n.className=`win-bubble ${l}`,n.textContent="win";const p=Math.floor(Math.random()*53)+32;n.style.width=`${p}px`,n.style.height=`${p*.72}px`,n.style.fontSize=`${p*.32}px`;const d=Math.random()*90+5,m=Math.random()*80+10;s.style.left=`${d}vw`,s.style.top=`${m}vh`;const u=(Math.random()-.5)*90,k=-Math.random()*120-40;s.style.setProperty("--tx-end",`${u}px`),s.style.setProperty("--ty-end",`${k}px`);const x=Math.random()*1.6,h=Math.random()*.8+2.2;s.style.animation=`win-fly ${h}s cubic-bezier(0.16, 1, 0.3, 1) ${x}s forwards`,n.style.animation=`win-scale-fade ${h}s cubic-bezier(0.25, 1, 0.5, 1) ${x}s forwards`,s.appendChild(n),t.appendChild(s),r.push(s)}document.body.appendChild(t),setTimeout(()=>{r.forEach(a=>a.remove())},5500)}restoreHero(){const e=document.querySelector("emu-hero #hero-content-wrapper"),t=document.querySelector("emu-hero #hero-easter-egg-container");t&&(t.style.opacity="0",t.style.transform="translateY(12px)"),setTimeout(()=>{t&&(t.innerHTML=""),e&&(e.style.opacity="1",e.style.transform="translateY(0) scale(1)",e.style.pointerEvents="auto"),this._isActive=!1},1e3)}}customElements.define("emu-easter-egg",R);
-//# sourceMappingURL=main-DLJ28k1W.js.map
+        `,t.style.opacity="1",t.style.transform="translateY(0)",requestAnimationFrame(()=>{const r=t.querySelector(".easter-egg-line1"),a=t.querySelector(".easter-egg-line2");r&&(r.style.opacity="1",r.style.transform="translateY(0)"),a&&(a.style.opacity="1",a.style.transform="translateY(0)")}))},1e3),setTimeout(()=>{this.restoreHero()},6e3)}spawnWinBubbles(){const t=document.createDocumentFragment(),r=[];for(let a=0;a<50;a++){const s=document.createElement("div");s.className="win-bubble-wrapper";const n=document.createElement("div"),c=Math.random()>.5?"bubble-right":"bubble-left";n.className=`win-bubble ${c}`,n.textContent="win";const d=Math.floor(Math.random()*53)+32;n.style.width=`${d}px`,n.style.height=`${d*.72}px`,n.style.fontSize=`${d*.32}px`;const m=Math.random()*90+5,p=Math.random()*80+10;s.style.left=`${m}vw`,s.style.top=`${p}vh`;const u=(Math.random()-.5)*90,k=-Math.random()*120-40;s.style.setProperty("--tx-end",`${u}px`),s.style.setProperty("--ty-end",`${k}px`);const f=Math.random()*1.6,h=Math.random()*.8+2.2;s.style.animation=`win-fly ${h}s cubic-bezier(0.16, 1, 0.3, 1) ${f}s forwards`,n.style.animation=`win-scale-fade ${h}s cubic-bezier(0.25, 1, 0.5, 1) ${f}s forwards`,s.appendChild(n),t.appendChild(s),r.push(s)}document.body.appendChild(t),setTimeout(()=>{r.forEach(a=>a.remove())},5500)}restoreHero(){const e=document.querySelector("emu-hero #hero-content-wrapper"),t=document.querySelector("emu-hero #hero-easter-egg-container");t&&(t.style.opacity="0",t.style.transform="translateY(12px)"),setTimeout(()=>{t&&(t.innerHTML=""),e&&(e.style.opacity="1",e.style.transform="translateY(0) scale(1)",e.style.pointerEvents="auto"),this._isActive=!1},1e3)}}customElements.define("emu-easter-egg",I);
+//# sourceMappingURL=main-FQFW8-PC.js.map
